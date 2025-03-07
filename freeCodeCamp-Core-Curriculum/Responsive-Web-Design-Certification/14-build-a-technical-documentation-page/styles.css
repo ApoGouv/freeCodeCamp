@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation Sidebar */
+#navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #222;
+  color: white;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#navbar header {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #555;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+#navbar ul li {
+  margin: 10px 0;
+}
+
+#navbar ul li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#navbar ul li a:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* Main Content */
+#main-doc {
+  margin-left: 270px;
+  padding: 20px;
+  max-width: 900px;
+}
+
+/* Section Headers */
+.main-section header {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Code Blocks */
+pre {
+  background-color: #363b46;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+code {
+  font-family: "Courier New", monospace;
+}
+
+/* Links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #navbar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 8px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  #navbar header {
+      padding-bottom: 4px;
+  }
+  
+  #navbar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0px 0px 0px;
+    margin: 0px;
+  }
+  
+  #navbar ul li {
+    margin: 0px;
+  }
+
+  #navbar ul li a {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 220px 10px 20px;
+  }
+}

@@ -1,0 +1,192 @@
+/**
+ * Survey Form
+ */
+
+ * {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #111111;
+  color: #aaaaaa;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0.9rem 0 0.8rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.83rem 0;
+}
+
+input, select {
+  height: 35px;
+  width: 100%;
+  color: #333333;
+  padding: 4px 8px;
+}
+
+input[type="checkbox"] {
+  width: 23px;
+  height: 23px;
+}
+
+input[type="radio"] {
+  width: 25px;
+  height: 25px;
+}
+
+textarea {
+  max-width: 100%;
+  color: #333333;
+  padding: 4px 8px;
+}
+
+#content {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  height: 100%;
+  font-size: 1rem;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem 0 0 0;
+  gap: 0.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.radio-ratings-wrapper .md-label {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-wrapper {
+  margin-top: 0.6rem;
+}
+
+.radio-wrapper label .sm-label {
+  display: none;
+}
+
+.radio-ratings-wrapper, .radio-wrapper {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.radio-wrapper label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.radio-ratings-wrapper > span:first-child, 
+.radio-wrapper > span:first-child {
+  width: 90px;
+  margin-right: 20px;
+}
+
+.form-group.want-to-see-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.form-group.want-to-see-wrapper > p {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.form-group.want-to-see-wrapper label {
+  width: 16%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#submit {
+  outline: none;
+  background: aquamarine;
+  border: 1px solid aquamarine;
+  margin-top: 0.4rem;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 5px;
+  cursor: pointer;
+  transition: all .3s linear;;
+}
+
+#submit:hover {
+  background: #529d84;
+}
+
+
+@media (max-width: 767.99px) {
+  #survey-form .radio-ratings-wrapper,
+  #survey-form .radio-ratings-wrapper .md-label {
+      display: none;
+  }
+
+  #survey-form .radio-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  #survey-form .radio-wrapper > span:first-child {
+      width: 100%;
+      flex-grow: 1;
+      margin: 0;
+      border-bottom: 1px solid #aaa;
+  }
+
+  #survey-form .radio-wrapper label {
+      display: flex;
+      flex-direction: column;
+      width: 44%;
+  }
+
+  #survey-form .radio-wrapper label .sm-label {
+      display: block;
+  }
+
+  #survey-form .form-group.want-to-see-wrapper {
+      justify-content: space-between;
+      gap: 10px;
+  }
+
+  #survey-form .form-group.want-to-see-wrapper label {
+      width: 45%;
+      text-align: center;
+  }
+}

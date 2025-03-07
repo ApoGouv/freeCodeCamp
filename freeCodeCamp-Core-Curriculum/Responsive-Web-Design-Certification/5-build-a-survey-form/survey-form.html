@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Satisfaction Survey Form - Escape the Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="content">
+        <h1 id="title">Customer Satisfaction Survey</h1>
+        <p id="description">Please help us improve by completing this survey. Your feedback is valuable to us and thus we ask you to be honest and answer based on your own experience and opinion.</p>
+        <hr />
+        <form id="survey-form">
+            <div class="form-group name-wrapper">
+                <label for="name" class="form-label" id="name-label">Name</label>
+                <input type="text" id="name" class="form-control" required placeholder="Your Name">
+            </div>
+
+            <div class="form-group email-wrapper">
+                <label for="email" class="form-label" id="email-label">Email</label>
+                <input type="email" id="email" class="form-control" required placeholder="Your Email">
+            </div>
+
+            <div class="form-group age-wrapper">
+                <label for="number" class="form-label" id="number-label">Age</label>
+                <input type="number" id="number" class="form-control" required min="18" max="110" placeholder="Your Age">
+            </div>
+            
+            <div class="form-group dropdown-wrapper">
+                <label for="dropdown" class="form-label" id="dropdown-label">Your ideal players number</label>
+                <select name="" id="dropdown" class="form-control">
+                    <option value="">Please select...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                    <option value="6">Six</option>
+                    <option value="7">Seven</option>
+                    <option value="8">Eight</option>
+                </select>
+            </div>
+
+            <div class="form-group satisfaction-rate-wrapper">
+                <p class="form-label">Please rate your satisfaction with</p>
+                <div class="radio-ratings-wrapper">
+                    <span></span>
+                    <span class="md-label">Very Unsatisfied</span>
+                    <span class="md-label">Unsatisfied</span>
+                    <span class="md-label">Neutral</span>
+                    <span class="md-label">Satisfied</span>
+                    <span class="md-label">Very Satisfied</span>
+                </div>
+                <div class="radio-wrapper">
+                    <span>Room Difficulty</span>
+                    <label>
+                        <input type="radio" value="Very Unsatisfied" name="room-difficulty" id="room-difficulty-0" class="form-control">
+                        <span class="sm-label">Very Unsatisfied</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Unsatisfied" name="room-difficulty" id="room-difficulty-1" class="form-control">
+                        <span class="sm-label">Unsatisfied</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Neutral" name="room-difficulty" id="room-difficulty-2" class="form-control">
+                        <span class="sm-label">Neutral</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Satisfied" name="room-difficulty" id="room-difficulty-3" class="form-control">
+                        <span class="sm-label">Satisfied</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Very Satisfied" name="room-difficulty" id="room-difficulty-4" class="form-control">
+                        <span class="sm-label">Very Satisfied</span>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <span>Actor Play</span>
+                    <label>
+                        <input type="radio" value="Very Unsatisfied" name="actor-play" id="actor-play-0" class="form-control">
+                        <span class="sm-label">Very Unsatisfied</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Unsatisfied" name="actor-play" id="actor-play-1" class="form-control">
+                        <span class="sm-label">Unsatisfied</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Neutral" name="actor-play" id="actor-play-2" class="form-control">
+                        <span class="sm-label">Neutral</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Satisfied" name="actor-play" id="actor-play-3" class="form-control">
+                        <span class="sm-label">Satisfied</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="Very Satisfied" name="actor-play" id="actor-play-4" class="form-control">
+                        <span class="sm-label">Very Satisfied</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group want-to-see-wrapper">
+                <p class="form-label">What would you like to see next time</p>
+                <label>
+                    <input type="checkbox" value="More actors" name="want-to-see" id="want-to-see-0" class="form-control">
+                    More actors
+                </label>
+                <label>
+                    <input type="checkbox" value="Math problems" name="want-to-see" id="want-to-see-1" class="form-control">
+                    Math problems
+                </label>
+                <label>
+                    <input type="checkbox" value="Harder puzzles" name="want-to-see" id="want-to-see-2" class="form-control">
+                    Harder puzzles
+                </label>
+                <label>
+                    <input type="checkbox" value="More teamwork" name="want-to-see" id="want-to-see-3" class="form-control">
+                    More teamwork
+                </label>
+                <label>
+                    <input type="checkbox" value="AI assistant" name="want-to-see" id="want-to-see-4" class="form-control">
+                    AI assistant
+                </label>
+            </div>
+
+            <div class="form-group comment-wrapper">
+                <label for="comment" class="form-label" id="comment-label">Leave a comment</label>
+                <textarea id="comment" class="form-control" placeholder="Your Comment" cols="25" rows="3"></textarea>
+            </div>
+
+            <div class="form-group submit-wrapper">
+                <button id="submit" type="submit" class="btn-submit">Send</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

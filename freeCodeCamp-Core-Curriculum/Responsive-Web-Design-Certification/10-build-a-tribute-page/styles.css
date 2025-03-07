@@ -1,0 +1,222 @@
+/**
+ * Tribute Page
+ */
+
+ * {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #313131;
+  color: #ffffff;
+  font-family: Verdana, sans-serif;
+}
+
+a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.reference {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+#main {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
+  margin: 30px auto;
+  align-items: center;
+}
+
+#title {
+  margin: 0 0 0.65rem;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+#img-div {
+  margin: 1rem 0.5rem;
+  max-width: 700px;
+}
+
+#image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#tribute-info {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  position: relative;
+  margin: 0.9rem 0 0.83rem;
+}
+
+#tribute-info > div > h2::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #ff9f55;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  --tmln-bg-color: #f5f5f5;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--tmln-bg-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.tmln-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  color: #333333;
+}
+
+/* The circles on the timeline */
+.tmln-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: var(--tmln-bg-color);
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.tmln-container.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.tmln-container.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.tmln-container.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid var(--tmln-bg-color);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--tmln-bg-color);
+}
+
+/* Add arrows to the right container (pointing left) */
+.tmln-container.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid var(--tmln-bg-color);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--tmln-bg-color) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.tmln-container.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.tmln-content {
+  padding: 16px 25px;
+  background-color: var(--tmln-bg-color);
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .tmln-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .tmln-container::before {
+    left: 60px;
+    border: medium solid var(--tmln-bg-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--tmln-bg-color) transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .tmln-container.left::after,
+  .tmln-container.right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .tmln-container.right {
+    left: 0%;
+  }
+}
+
+h3.notice {
+  border-left: 2px double #ffffff;
+  padding: 5px 5px 5px 10px;
+  font-size: 1.1rem;
+}
+
+h3.notice a {
+  border-bottom: 1px dotted #ffffff;
+}
+
+#references {
+  margin: 15px 0;
+  border: 0px solid #ffffff;
+  background: #262626;
+  padding: 1rem;
+}
